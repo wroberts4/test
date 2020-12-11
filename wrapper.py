@@ -1,6 +1,8 @@
 from git import Repo
 import pip
 from sys import argv
+from importlib import reload
+import main
 
 
 def version(v):
@@ -8,6 +10,6 @@ def version(v):
     repo.git.checkout(v)
     pip.main(['install', '.'])
 
-    from main import main
-    main()
+    reload(main)
+    main.main()
 
