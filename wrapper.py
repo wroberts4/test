@@ -3,9 +3,9 @@ import pip
 from sys import argv
 
 
-def version():
-    print('version 2')
+def version(v):
+    print('version 1')
     repo = Repo('.')
-    repo.git.checkout(string(argv[1]))
+    repo.git.checkout(v)
     pip.main(['install', '.'])
 
