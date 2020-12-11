@@ -1,2 +1,2 @@
 def main():
-    print('version 2')
+    print('version 1')
