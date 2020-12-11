@@ -4,7 +4,7 @@ from sys import argv
 
 
 def version(v):
-    print('version 1')
+    print('version 2')
     repo = Repo('.')
     repo.git.checkout(v)
     pip.main(['install', '.'])
