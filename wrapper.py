@@ -1,12 +1,13 @@
 from git import Repo
 import pip
+from sys import argv
 
 
-repo = Repo('./')
-repo.git.checkout('v1')
-pip.main(['install', '.'])
+def version():
+    print('version 1')
 
 
-class main():
-    def __init__(self):
-        print('version 1')
+if __name__ == 'main':
+    repo = Repo('.')
+    repo.git.checkout(argv[1])
+    pip.main(['install', '.'])
