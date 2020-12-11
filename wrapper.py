@@ -4,10 +4,8 @@ from sys import argv
 
 
 def version():
-    print('version 1')
-
-
-if __name__ == 'main':
+    print('version 2')
     repo = Repo('.')
-    repo.git.checkout(argv[1])
+    repo.git.checkout(string(argv[1]))
     pip.main(['install', '.'])
+
